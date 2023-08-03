@@ -16,13 +16,13 @@ Users should be able to:
 
 ### Screenshot
 
-![]()
-![]()
+![](./screenshot/desktop.png)
+![](./screenshot/mobile.png)
 
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://github.com/DanielaMichelle/ping-coming-soon-page-master
+- Live Site URL: https://danielamichelle.github.io/ping-coming-soon-page-master/
 
 ### Built with
 
