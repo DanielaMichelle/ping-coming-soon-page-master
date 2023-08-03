@@ -1,0 +1,228 @@
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --ver-dark-blue: hsl(209, 33%, 12%);
+    --libre-franklin-font: 'Libre Franklin', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%; 
+}
+
+header {
+    width: 100vw;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo {
+    width: 10rem;
+}
+
+main {
+    padding: 0px 30%;
+    text-align: center;
+}
+
+main .coming-soon-page__title {
+    font-family: var(--libre-franklin-font);
+    font-weight: 300;
+    font-size: 5rem;
+    color: var(--gray);
+}
+
+main .coming-soon-page__title span {
+    font-weight: 700;
+    color: var(--ver-dark-blue);
+}
+
+main .coming-soon-page__message {
+    font-family: var(--libre-franklin-font);
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--ver-dark-blue);
+    margin-top: 2rem;
+}
+
+main .coming-soon-page__searcher {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coming-soon-page__searcher .coming-soon-page__searcher--input {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .coming-soon-page__searcher input {
+    height: 5rem;
+    padding-left: 1.5rem;
+    border-radius: 5rem;
+    border-color: var(--pale-blue);
+    border-style: solid;
+    padding-right: 1.5rem;
+    color: var(--ver-dark-blue)
+}
+
+main .coming-soon-page__searcher input::placeholder {
+    color: var(--pale-blue);
+    font-family: var(--libre-franklin-font);
+    font-weight: 300;
+}
+
+
+/* ERROR */
+
+main .coming-soon-page__searcher .coming-soon-page__searcher--input .error {
+    border-color: var(--light-red); 
+}
+ 
+main .coming-soon-page__searcher span {
+    color: var(--light-red);
+    display: none;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: var(--libre-franklin-font);
+    font-weight: 600;
+    align-self: flex-start;
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+
+/* END ERROR */
+
+
+main .coming-soon-page__searcher button {
+    width: 28%;
+    height: 5rem;
+    border-radius: 5rem;
+    border: none;
+    background-color: var(--blue);
+    color: var(--pale-blue);
+    font-weight: 600;
+    box-shadow: 4px 4px 30px -4px rgba(21,31,41,0.75);
+}
+
+main .coming-soon-page__image {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 4rem;    
+    position: relative;
+    margin-top: 10rem;
+}
+
+footer .social-media-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+footer .social-media-icons figure {
+    border: 1px solid var(--gray);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+    margin-left: 1rem;
+}
+
+footer .social-media-icons figure:hover {
+    background-color: var(--blue);
+    border: none;
+    color: white;
+}
+
+footer .copyright {
+    color: var(--gray);
+    padding-top: 3rem;
+    font-family: var(--libre-franklin-font);
+}
+
+@media (max-width: 1024px) {
+    main {
+        padding: 0px 20em;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0px 10em;
+    }
+
+    main .coming-soon-page__title {
+        font-size: 3rem;
+    }
+
+    header .logo {
+        width: 8rem;
+    }
+
+    main .coming-soon-page__searcher {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coming-soon-page__searcher .coming-soon-page__searcher--input {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    main .coming-soon-page__searcher button {
+        width: 100%;
+    }
+
+    main .coming-soon-page__searcher span {
+        align-self: center;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        height: 11rem;
+    }
+
+    header .logo {
+        width: 6rem;
+    }
+
+    main {
+        padding: 0px 3em;
+    }
+
+    main .coming-soon-page__title {
+        font-size: 2.5rem;
+    }
+
+    main .coming-soon-page__message {
+        font-size: 1.5rem;
+    }
+
+    main .coming-soon-page__searcher {
+        margin-bottom: 6rem;
+    }
+
+}

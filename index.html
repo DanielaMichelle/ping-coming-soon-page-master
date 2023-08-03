@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet"/>
+
+  <title>Frontend Mentor | Ping coming soon page</title>
+
+</head>
+<body>
+  <header>
+    <img class="logo" src="./images/logo.svg" alt="Ping logo">
+  </header>
+
+  <main>
+    <h1 class="coming-soon-page__title">We are launching <span>soon!</span></h1>
+    <p class="coming-soon-page__message">Subscribe and get notified</p>
+
+    <section class="coming-soon-page__searcher">
+      <div class="coming-soon-page__searcher--input" >
+        <input id="seacher-input" type="search" placeholder="Your email address...">
+        <span id="seacher-message">Please provide a valid email address</span>
+      </div>
+      <button id="notify-btn">Notify Me</button>
+    </section>
+
+    <img class="coming-soon-page__image" src="./images/illustration-dashboard.png" alt="dashboard illustration">
+  </main>
+  
+
+  <footer>
+    <div class="social-media-icons">
+      <figure class="facebook">
+        <i class="fa-brands fa-facebook-f facebook-icon"></i>
+      </figure>
+
+      <figure class="twitter">
+        <i class="fa-brands fa-twitter twitter-icon"></i>
+      </figure>
+
+      <figure class="instagram">
+        <i class="fa-brands fa-instagram instagram-icon"></i>
+      </figure>
+    </div>
+
+    <span class="copyright">&copy; Copyright Ping. All rights reserved.</span>
+  </footer>
+
+  <script>
+    const inputMailValue = document.getElementById('seacher-input');
+    const btnNotify = document.getElementById('notify-btn');
+    const errorMessage = document.getElementById('seacher-message');
+
+    btnNotify.addEventListener("click", () => {
+      let ad =  inputMailValue.value.match(/\w+@\w+\.\w+/);
+      console.log(ad);
+      if(ad === null) {
+        inputMailValue.classList.add("error");
+        errorMessage.style.display = "block";
+      } else {
+        inputMailValue.classList.remove("error");
+        errorMessage.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
